@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>个人博客</title>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            body{
+                background-color: #f5f6f7;
+            }
+            .navbar{
+                margin-bottom: 0;
+            }
+
+            .navbar-header > span{
+                display: inline-block;
+                padding: 15px;
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            .album{
+                position: relative;
+            }
+
+            .carousel {
+                position: relative;
+                width: 100%;
+                height: 550px;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .carousel-item {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 550px;
+                opacity: 0;
+                transition: opacity 1s linear;
+                background-repeat: no-repeat;
+            }
+
+            .carousel-item.active {
+                opacity: 1;
+            }
+
+            .carousel-nav {
+                position: absolute;
+                left: 50%;
+                bottom: 10%;
+                transform: translateX(-50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 99;
+            }
+
+            .carousel-nav button {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: none;
+                margin: 0 10px;
+                background-color: #fff;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .carousel-nav button.active {
+                width: 20px;
+                background-color: #ffcc33;
+
+            }
+
+            .article{
+                background-color: #ffffff;
+                border-radius: 8px;
+                padding: 20px;
+                margin: 10px 0;
+                height:200px;
+            }
+
+            .main{
+                margin:30px 0;
+            }
+
+            .flex{
+                flex: 1;
+            }
+
+            p.text-ellipsis{
+                margin-bottom: 6px;
+                color:#777;
+            }
+
+            footer{
+                background-color: #1e2022!important;
+                color:#fff;
+                text-align: center;
+                padding:30px 0;
+            }
+
+        </style>
+	</head>
+	<body>
+		<header class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <span>个人博客</span>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#h5-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <ul class="nav navbar-nav navbar-right hidden-xs hidden-sm"> 
+                    <li><a href="re.html"><span class="glyphicon glyphicon-user"></span> 注册</a></li> 
+                    <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li> 
+                </ul> 
+                <nav id="h5-navbar-collapse" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="">博客首页</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            学习站台 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a href="https://www.csdn.net/">csdn</a></li>
+                          <li><a href="https://www.runoob.com/">菜鸟教程</a></li>
+                          <li><a href="https://www.douyin.com/">休闲一下</a></li>
+                        </ul>
+                      </li>
+                    <li class=""><a href="book.html">主修课程</a></li>
+                    <li class=""><a href="feedback.html">留言反馈</a></li>
+                    <li class=""><a href="about.html">关于我们</a></li>
+                  </ul>
+                </nav>
+              </div>
+        </header>
+        <div class="album hidden-xs hidden-sm">
+            <div class="carousel">
+                <div class="carousel-item active" style="background-image: url('./images/84707.jpg'); background-size: 100% auto;"></div>
+                <div class="carousel-item" style="background-image: url('./images/222.jpg'); background-size: 100% auto;"></div>
+            </div>
+            <div class="carousel-nav">
+                <button class="active"></button>
+                <button></button>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="article">
+                            <div style="float: left;margin-right: 20px;"><img src="images/jsp1.jpg" height="160"></div>
+                            <div class="flex">
+                                <h4>Web 技术概述</h4>
+                                <p class="text-ellipsis"> 
+								
+了解静态网页中静态的概念 ；<br>
+了解动态网页中动态的含义；<br>
+了解 Web 服务器了解网络数据库；<br>
+了解 ASP、PHP、JSP 和ASP.NET；<br>
+了解 C/S 结构与 B/S 结构，请详看下面的文章</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="article">
+                            <div style="float: left;margin-right: 20px;"><img src="images/jsp1.jpg" height="160"></div>
+                            <div class="flex">
+                                <h4>电子商城系统介绍 </h4>
+                                <p class="text-ellipsis">理解 eBuy 电子商城系统的基本设计思想；<br>
+熟悉系统需求分析；<br>
+熟悉系统功能模块设计；<br>
+熟悉系统界面设计；<br>
+熟悉系统主要流程设计；<br>
+熟悉数据库设计和详细设计，请详看下面的文章</p>
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="article">
+                            <div style="float: left;margin-right: 20px;"><img src="images/jsp1.jpg" height="160"></div>
+                            <div class="flex">
+                                <h4>搭建 JSP 开发环境 </h4>
+                                <p class="text-ellipsis">掌握 JDK 的安装与环境设置；<br>
+掌握 Tomcat 的安装与配置；<br>
+熟悉常用的 JSP 开发工具的使用，请详看下面的文章</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="article">
+                            <div style="float: left;margin-right: 20px;"><img src="images/jsp1.jpg" height="160"></div>
+                            <div class="flex">
+                                <h4>JSP 语法基础</h4>
+                                <p class="text-ellipsis">掌握 JSP 中注释的添加方法；<br>
+掌握 JSP 的脚本元素:声明、表达式和脚本程序的语法格式；<br>
+掌握 JSP 中 page 指令、include 指令的使用；<br>
+掌握 JSP 的 include 动作、forward 动作、param动作、plugin 动作等动作元素的使用，请详看下面的文章</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="article">
+                            <div style="float: left;margin-right: 20px;"><img src="images/jsp1.jpg" height="160"></div>
+                            <div class="flex">
+                                <h4>JSP 内置对象</h4>
+                                <p class="text-ellipsis">掌握 JSP 中 out 对象的使用方法；<br>
+掌握 JSP 中 request 对象的使用方法；<br>
+掌握 JSP 中 response 对象的使用方法；<br>
+掌握 JSP 中 session 对象的使用方法；<br>
+掌握 JSP 中 application 对象的使用方法；<br>
+掌握 JSP 中 config、page、exception 对象的使用方法；<br>
+掌握 JSP 中Cookie 对象的使用方法，请详看下面的文章</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="article">
+                            <div style="float: left;margin-right: 20px;"><img src="images/jsp1.jpg" height="160"></div>
+                            <div class="flex">
+                                <h4>数据库访问技术</h4>
+                                <p class="text-ellipsis">掌握 JDBC 的概念；<br>
+掌握 JDBC API主要内容；<br>
+熟悉和掌握 Statement 接口、Result 接口的常用方法和相关概念；<br>
+掌握 JSP 中检索数据库和更新数据库的方法；<br>
+掌握 JSP 中使用预编译 SQL 语句及执行存储过程的方法，请详看下面的文章</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="article">
+                            <div style="float: left;margin-right: 20px;"><img src="images/jsp1.jpg" height="160"></div>
+                            <div class="flex">
+                                <h4>JavaBean技术</h4>
+                                <p class="text-ellipsis">了解 JavaBean 的概念，掌握在 JSP 中编写 JavaBean 的方法；<br>
+掌握在 JSP 中使用 JavaBean 的方法；<br>
+熟悉并掌握应用 JavaBean 封装数据库访问操作；<br>
+熟悉并掌握应用 JavaBean 实现购物车；<br>
+熟悉并掌握应用 JavaBean 实现编码转换，请详看下面的文章</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="article">
+                            <div style="float: left;margin-right: 20px;"><img src="images/jsp1.jpg" height="160"></div>
+                            <div class="flex">
+                                <h4>Servlet技术</h4>
+                                <p class="text-ellipsis">掌握 Servlet 的基本概念，了解 Servlet 的生命周期；<br>
+                                                        掌握编写和配置 Servlet、调用 Servlet 的方法；<br>
+                                                        掌握 Servlet 读取HTML 表单数据的方法；<br>
+                                                        掌握 Servlet 读取 Cookie 数据的方法；<br>
+掌握 Servlet 读取 Session 数据的方法；<br>
+掌握 Servlet 读取 HTTP 请求头数据的方法，请详看下面的文章</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <nav aria-label="Page navigation" class="text-center">
+                    <ul class="pagination">
+                      <li>
+                        <a href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li><a href="#">1</a></li>
+                      <li><a href="book.html">2</a></li>
+                      <li><a href="feedback.html">3</a></li>
+                      <li><a href="about.html">4</a></li>
+                      
+                      <li>
+                        <a href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2021-2023 刘宇小组个人博客</p>
+            <p>京ICP备11008151号-6</p>
+        </footer>
+
+        <script src="./scroll.js"></script>
+	</body>
+</html>
